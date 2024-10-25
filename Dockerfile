@@ -31,7 +31,3 @@ COPY . .
 
 RUN chmod +x entrypoint.sh
 ENTRYPOINT ["./entrypoint.sh"]
-
-#RUN alembic upgrade head
-#
-#WORKDIR /app/bot
