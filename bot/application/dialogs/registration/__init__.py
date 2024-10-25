@@ -1,1 +1,0 @@
-from .dialog import dialog as registration_dialog
