@@ -6,6 +6,7 @@ class TranslatorRunner:
     
     lang: Lang
     registration: Registration
+    update_data: Update_data
     name: Name
     first_name_input: First_name_input
     last_name_input: Last_name_input
@@ -34,6 +35,11 @@ class Lang:
 class Registration:
     @staticmethod
     def button() -> Literal["""Registration"""]: ...
+
+
+class Update_data:
+    @staticmethod
+    def button() -> Literal["""Change personal data"""]: ...
 
 
 class Name:

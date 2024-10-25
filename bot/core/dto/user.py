@@ -13,6 +13,7 @@ class UserBase(IsAdmin):
     user_id: int
     first_name: str | None = None
     last_name: str | None = None
+    name_is_setted: bool = False
     is_active: Optional[bool] = Field(default=True)
 
 class UserLanguage(BaseModel):
@@ -25,3 +26,4 @@ class User(UserBase, UserLanguage):
 class RegisterUser(BaseModel):
     first_name: str
     last_name: str
+    name_is_setted: bool = True

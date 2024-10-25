@@ -21,3 +21,6 @@ class Language(BaseKeys):
 class RegistrationKeys(StrEnum):
     FIRST_NAME = 'first_name'
     LAST_NAME = 'last_name'
+
+    NAME_IS_SETTED = 'name_is_setted'
+

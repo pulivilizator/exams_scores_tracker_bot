@@ -9,6 +9,8 @@ Registration texts:
 
 registration-button = Registration
 
+update_data-button = Change personal data ⚙️
+
 name-err-message = <b>Enter valid text</b>
                    The first or last name must not be shorter than 2 characters and can only contain text characters and the ‘-’ sign.
 
