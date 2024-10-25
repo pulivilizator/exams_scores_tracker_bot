@@ -2,8 +2,8 @@ import asyncio
 from logging.config import fileConfig
 
 from alembic import context
-from core.config.config import get_config
-from repository.models import Base
+from bot.core.config.config import get_config
+from bot.repository.models import Base
 from sqlalchemy import pool
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config

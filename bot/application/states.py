@@ -6,3 +6,7 @@ class MainMenuSG(StatesGroup):
 class RegistrationSG(StatesGroup):
     first_name_input = State()
     last_name_input = State()
+
+class ScoreSG(StatesGroup):
+    enter_scores = State()
+    view_scores = State()
