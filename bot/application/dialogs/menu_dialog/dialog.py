@@ -13,11 +13,11 @@ dialog = Dialog(
         Row(
             Start(
                 text=Format('{enter_scores_button}'),
-                state=ScoreSG.enter_scores,
+                state=ScoreSG.enter_name,
                 id='enter_scores'),
             Start(
                 text=Format('{list_scores_button}'),
-                state=ScoreSG.enter_scores,
+                state=ScoreSG.show_scores,
                 id='list_scores'),
         ),
         Start(text=Format('{registration_button}'), state=RegistrationSG.first_name_input, id='start_register'),

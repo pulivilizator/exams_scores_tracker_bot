@@ -37,8 +37,9 @@ async def main():
     setup_dialogs(dp)
     bot = Bot(token=config.bot.token,
               default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    dp.startup.register(set_menu)
     await bot.delete_webhook(drop_pending_updates=True)
-
+    await set_menu(bot)
 
     await dp.start_polling(bot)
 

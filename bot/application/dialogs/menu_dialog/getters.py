@@ -28,8 +28,14 @@ async def main_menu_getter(dialog_manager: DialogManager,
     if name_is_setted:
         registration_button = i18n.update_data.button()
 
+    fullname: dto.UserFullName = await user_cache.hget_all(user_id=user.id, response_model=dto.UserFullName)
+    first_name = fullname.first_name or ''
+    last_name = f' {fullname.last_name}' or ''
+
     return {
-        'menu_message': i18n.menu_message(),
+        'menu_message': i18n.menu_message(first_name=first_name, last_name=last_name),
+        'enter_scores_button': i18n.scores.enter.button(),
+        'list_scores_button': i18n.scores.list.button(),
         'change_lang_button': change_lang_button,
         'registration_button': registration_button
     }

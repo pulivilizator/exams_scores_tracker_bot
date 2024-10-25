@@ -9,10 +9,12 @@ from bot.core.enums import LanguageList
 class IsAdmin(BaseModel):
     is_admin: Optional[bool] = Field(default=False)
 
-class UserBase(IsAdmin):
-    user_id: int
+class UserFullName(BaseModel):
     first_name: str | None = None
     last_name: str | None = None
+
+class UserBase(IsAdmin, UserFullName):
+    user_id: int
     name_is_setted: bool = False
     is_active: Optional[bool] = Field(default=True)
 

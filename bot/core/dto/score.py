@@ -5,10 +5,12 @@ from pydantic import BaseModel
 
 class ScoreBase(BaseModel):
     score_id: UUID
+
+class ScoreUser(BaseModel):
     user_id: int
 
 class ScoreName(BaseModel):
-    name: str
+    exam_name: str
 
 class ScoreQuantity(BaseModel):
     quantity: int
@@ -17,5 +19,8 @@ class ScoreTimestamp(BaseModel):
     created_at: datetime
     updated_at: datetime
 
-class Score(ScoreBase, ScoreTimestamp, ScoreQuantity, ScoreName):
+class Score(ScoreBase, ScoreUser, ScoreTimestamp, ScoreQuantity, ScoreName):
+    pass
+
+class CreateScore(ScoreName, ScoreQuantity, ScoreUser):
     pass

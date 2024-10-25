@@ -24,3 +24,7 @@ class RegistrationKeys(StrEnum):
 
     NAME_IS_SETTED = 'name_is_setted'
 
+class ScoreKeys(StrEnum):
+    NAME = 'exam_name'
+    QUANTITY = 'scores_quantity'
+

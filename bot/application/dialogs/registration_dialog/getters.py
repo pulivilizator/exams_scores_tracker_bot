@@ -7,8 +7,6 @@ from fluentogram import TranslatorRunner
 if TYPE_CHECKING:
     from bot.locales.stub import TranslatorRunner
 
-
-@inject
 async def registration_getter(dialog_manager: DialogManager,
                               i18n: TranslatorRunner,
                               **kwargs):

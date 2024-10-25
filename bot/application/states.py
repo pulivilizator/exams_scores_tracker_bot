@@ -8,5 +8,6 @@ class RegistrationSG(StatesGroup):
     last_name_input = State()
 
 class ScoreSG(StatesGroup):
+    enter_name = State()
     enter_scores = State()
-    view_scores = State()
+    show_scores = State()
