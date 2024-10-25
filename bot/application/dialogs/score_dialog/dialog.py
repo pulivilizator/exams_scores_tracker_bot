@@ -51,7 +51,7 @@ dialog = Dialog(
                    on_click=delete_score),
             id='exams',
             width=1,
-            height=2,
+            height=5,
             hide_on_single_page=True,
 
         ),
